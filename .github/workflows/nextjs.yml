@@ -24,3 +24,5 @@ jobs:
           git pull origin main
           npm install
           npm run build
+          kill -9 `lsof -t -i:80`
+          npm run start -p 80 & bg
