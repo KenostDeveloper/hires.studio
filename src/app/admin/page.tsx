@@ -382,7 +382,7 @@ export default function Photo() {
                     <div className={styles.photos}>
                         {photos.map((photo: IPhoto) => 
                             <div className={styles.photo} key={photo.id}>
-                                <img src={`${process.env.BASE_PATH_IMAGE}photo/${photo.name}`} alt={photo.alt} />
+                                <img src={`${process.env.NEXT_PUBLIC_BASE_PATH_IMAGE}photo/${photo.name}`} alt={photo.alt} />
                                 <div>
                                     <p>Описание: {photo.alt}</p>
                                     <div onClick={() => deletePhoto(photo.id)} className={styles.btnDelete}>Удалить</div>
@@ -419,7 +419,7 @@ export default function Photo() {
                     <div className={styles.photos}>
                         {portfolios.map((portfolio: IPortfolio) => 
                             <div className={styles.photo} key={portfolio.id}>
-                                <img src={`${process.env.BASE_PATH_IMAGE}portfolio/${portfolio.image}`} />
+                                <img src={`${process.env.NEXT_PUBLIC_BASE_PATH_IMAGE}portfolio/${portfolio.image}`} />
                                 <div>
                                     <p className={styles.mb1}>Ссылка: <a href={portfolio.iframeLink} target="_blank">{portfolio.iframeLink}</a></p>
                                     <p>Тип: {portfolio.type == "Podcasts" ? "Подкаст" : portfolio.type == "ConversationalVideos" ? "Разговорные видео" : portfolio.type == "Interview" ? "Интервью" : "Прямой эфир"}</p>

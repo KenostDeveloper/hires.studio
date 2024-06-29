@@ -52,7 +52,7 @@ const SwiperPortfolio = ({portfolio, handlePortfolioClick, type}:any) => {
                     <Link target="_blank" href={port.iframeLink} className={styles.slidePortfilio}>
                         <img
                             className={styles.slidePortfilioImg}
-                            src={`${process.env.BASE_PATH_IMAGE}portfolio/${port.image}`}
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH_IMAGE}portfolio/${port.image}`}
                             alt=""
                         />
                         <svg className={styles.slidePortfilioPlay} width="73" height="77" viewBox="0 0 73 77" xmlns="http://www.w3.org/2000/svg">

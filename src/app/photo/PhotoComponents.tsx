@@ -125,8 +125,8 @@ export default function PhotoComponents() {
                 // </Link>
                 <img
                     key={photoOne.id}
-                    onClick={() => getImg(`${URL}${process.env.BASE_PATH_IMAGE}photo/${photoOne.name}`)}
-                    src={`${URL}${process.env.BASE_PATH_IMAGE}photo/${photoOne.name}`}
+                    onClick={() => getImg(`${URL}${process.env.NEXT_PUBLIC_BASE_PATH_IMAGE}photo/${photoOne.name}`)}
+                    src={`${URL}${process.env.NEXT_PUBLIC_BASE_PATH_IMAGE}photo/${photoOne.name}`}
                     alt={photoOne.alt}
                 />
             ))}
