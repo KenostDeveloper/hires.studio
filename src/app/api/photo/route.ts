@@ -32,14 +32,14 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const name = uuidv4();
     
         //Путь файла
-        const path = "/app/public/images/photo/temp/" + name + type;
+        const path = `${process.cwd()}${process.env.PATH_IMAGE}photo/temp/` + name + type;
         //Сохраняем файл
         await writeFile(path, buffer);
 
         try {
             await sharp(path)
               .jpeg({ quality: 40 })
-              .toFile(`/app/public/images/photo/${name}.jpeg`);
+              .toFile(`${process.cwd()}${process.env.PATH_IMAGE}photo/${name}.jpeg`);
         } catch (error) {
             console.log(error);
         }
@@ -115,7 +115,8 @@ export async function DELETE(req: NextRequest) {
     })
 
     //Путь файла
-    const path = "/app/public/images/photo/" + deletePhoto.name;
+    const path = `${process.cwd()}${process.env.PATH_IMAGE}photo/` + deletePhoto.name;
+    
     //Удаляем файл
     unlinkSync(path);
 
