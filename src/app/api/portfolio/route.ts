@@ -39,7 +39,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const name = uuidv4() + typeFile;
     
         //Путь файла
-        const path = "/app/public/images/portfolio/" + name;
+        const path = `${process.cwd()}${process.PATH_IMAGE}portfolio/${name}`;
         //Сохраняем файл
         await writeFile(path, buffer);
     
@@ -103,7 +103,7 @@ export async function DELETE(req: NextRequest) {
     })
 
     //Путь файла
-    const path = "/app/public/images/portfolio/" + deletePortfolio.image;
+    const path = `${process.cwd()}${process.PATH_IMAGE}portfolio/` + deletePortfolio.image;
 
     //Удаляем файл
     unlinkSync(path);
