@@ -40,6 +40,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     
         //Путь файла
         const path = `${process.cwd()}${process.env.PATH_IMAGE}portfolio/${name}`;
+        console.log(path)
         //Сохраняем файл
         await writeFile(path, buffer);
     
@@ -53,7 +54,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     
         return NextResponse.json({success: true, message: "Файл успешно загружен!", newPortfolio});
     }catch(e){
-        return NextResponse.json({success: false, message: "Произошла неизвестная ошибка, попробуйте снова :("});
+        return NextResponse.json({success: false, message: "Произошла неизвестная ошибка, попробуйте снова :(", e});
     }
 }
 
