@@ -1,0 +1,35 @@
+version: '3.5'
+
+services:
+  mysql:
+    container_name: hires-mysql
+    image: mysql:8.3.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - 4000:3306
+    networks:
+      - hires
+    restart: unless-stopped
+
+  adminer:
+    container_name: hires-adminer
+    image: adminer:latest
+    environment:
+      adminer_DEFAULT_EMAIL: hires@admin.com
+      adminer_DEFAULT_PASSWORD: hires
+      adminer_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - 4100:8080
+    networks:
+      - hires
+    restart: unless-stopped
+
+networks:
+  hires:
+    driver: bridge
+
+volumes:
+  mysql:

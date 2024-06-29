@@ -1,0 +1,1168 @@
+.home{
+    width: 100%;
+    height: 100vh;
+    transition: all 0.4s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.main{
+    overflow-x: hidden;
+    width: 100vw;
+    position: relative;
+}
+
+.homeText{
+    position: absolute;
+    bottom: 80px;
+    color: #FFF;
+    h1{
+        font-size: 80px;
+        font-weight: 900;
+        font-family: 'cygre-black', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 55px;
+        max-width: 900px;
+        line-height: 1.2;
+    }
+
+    p{
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-family: 'cygre-black', sans-serif;
+        max-width: 800px;
+    }
+}
+
+.landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ColoredCard{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+
+.clients{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.clients__el{
+    width: calc(50% - 10px);
+    height: 230px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.clients__el:hover::before{
+    background-color: rgba(74, 14, 85, 0.70);
+}
+
+.clients__el::before{
+    background-color: rgba(0, 0, 0, 0.60);
+    transition: all 0.5s;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.clients__el img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clients__el p{
+    position: absolute;
+    font-family: 'cygre-black', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFF;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.ClientBack{
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.Location{
+    display: flex;
+    gap: 24px;
+}
+
+
+.contact{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.contactRight{
+    width: 35%;
+    padding: 30px 0;
+}
+
+.contactLeft{
+    width: 65%;
+    margin-right: 30px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.contactSocials{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0 40px 0;
+}
+
+.contactSocials a svg{
+    width: 44px;
+    height: 44px;
+    fill: #312C2C;
+    transition: all 0.5s;
+}
+
+.contactSocials a:hover svg{
+    fill: #4A0EB9;
+    transform: scale(1.2);
+}
+
+.contactRight p{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #312C2C;
+}
+
+.contactRight a{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #312C2C;
+    font-family: 'cygre-black', sans-serif;
+    transition: all 0.5s;
+}
+
+.contactRight a:hover{
+    color: #4A0EB9;
+}
+
+.contactMap{
+    width: 100%;
+    height: 100%;
+}
+
+
+.contactButtons p{
+    font-family: 'cygre-black', sans-serif;
+    color: #4A0EB9;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.contactButtons{
+    display: flex;
+    gap: 26px;
+    margin-bottom: 50px;
+}
+
+.contactInfo{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #312C2C;
+    margin-bottom: 20px;
+}
+
+.contactSocialsMobile{
+    display: none;
+}
+
+
+
+.bronButton{
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 900 !important;
+    line-height: 100% !important;
+    color: #4A0EB9 !important;
+    display: flex;
+    align-items: center;
+    gap: 8px !important;
+    margin-top: 30px !important;
+    cursor: pointer;
+}
+
+.bronButton img{
+    width: 81px;
+    height: 16px;
+    transition: all 0.5s;
+}
+
+.bronButton:hover img{
+    height: 16px;
+    width: 120px;
+    transform: scale(1.2);
+}
+
+.twoColums{
+    display: flex;
+    gap: 100px;
+    margin-bottom: 60px;
+
+    p{
+        color: #000000;
+        font-size: 28px;
+        font-weight: 700;
+        width: 50%;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background: #4A0EB9;
+        color: #FFF;
+        width: 50%;
+        height: 114px;
+        position: relative;
+        border: 4px solid #4A0EB9;
+        transition: all 0.5s;
+
+        
+        &:hover{
+            background: #FFF;
+
+            span{
+                color: #4A0EB9;
+            }
+
+            svg{
+                padding-left: 10px;
+                width: 80px;
+            }
+
+            svg path{
+                fill: #4A0EB9;
+            }
+        }
+
+        svg{
+            position: absolute;
+            left: 28px;
+            width: 70px;
+            transition: all 0.4s;
+        }
+
+        svg path{
+            fill: #FFF;
+            transition: all 0.5s;
+        }
+
+        span{
+            color: #FFF;
+            font-weight: 900;
+            font-size: 24px;
+            text-transform: uppercase;
+            padding-left: 70px;
+        }
+    }
+}
+
+.pricesCardTariffPriceMini{
+    font-size: 32px;
+    font-weight: 700;
+    color: #4A0EB9;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.pricesCardTariffCenter{
+    position: relative;
+    top: -40px;
+}
+
+
+.pricesCardTariffPriceMiniLine{
+    position: relative;
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+    padding-top: 28px;
+
+    &::before{
+        position: absolute;
+        width: 80%;
+        height: 1px;
+        background: #4A0EB9;
+        content: "";
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+    }
+}
+
+.pricesCard{
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    &Tariff{
+        width: calc(100% / 3);
+        background: #FFF;
+        border-radius: 15px;
+        border: 1px solid #4A0EB9;
+        padding: 45px 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        b{
+            font-size: 32px;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+            display: block;
+            padding-top: 26px;
+        }
+
+        .icon{
+            width: 104px;
+            height: 104px;
+            background: #4A0EB9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -52px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+}
+
+.pricesCardTariffOne{
+    margin-top: 75px;
+    width: 100%;
+
+    li{
+        margin-bottom: 14px;
+        font-weight: 500;
+    }
+}
+
+
+.pricesCardTariffTwo{
+    margin-top: 44px;
+    width: 100%;
+
+    li{
+        margin-bottom: 14px;
+        font-weight: 500;
+    }
+}
+
+.pricesCardTariffDesc{
+    img{
+        width: 38px;
+        height: 28px;
+        object-fit: contain;
+    }
+    font-size: 18px;
+    color: #312C2C;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.pricesCardTariffPrice{
+    font-size: 48px;
+    color: #4A0EB9;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 24px;
+    position: relative;
+    margin-top: 48px;
+    width: 100%;
+    margin-bottom: 24px;
+
+    &::before{
+        position: absolute;
+        width: 80%;
+        height: 1px;
+        background: #4A0EB9;
+        content: "";
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+    }
+}
+
+.pricesCardTariffButton{
+    background: #4A0EB9;
+    color: #FFF;
+    max-width: 315px;
+    width: 100%;
+    border-radius: 50px;
+    border: 2px solid #4A0EB9;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    
+    &:hover{
+        background: #FFF;
+        color: #4A0EB9;
+        padding-left: 10px;
+    }
+
+    &::before{
+        content: "";
+        background: url("../../../public/icons/buttonAnim.svg");
+        width: 146px;
+        position: absolute;
+        height: 148px;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: 60%; */
+        right: -105px;
+        transition: 0.5s;
+    }
+
+
+    &::after{
+        content: "";
+        background: url("../../../public/icons/buttonAnim.svg");
+        width: 146px;
+        position: absolute;
+        height: 148px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90%;
+        left: -105px;
+        transition: 0.5s;
+    }
+
+    &:hover::before{
+        right: -55px;
+        transition: 0.5s;
+    }
+
+    &:hover::after{
+        left: -75px;
+        transition: 0.5s;
+    }
+}
+
+
+.lines{
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    pointer-events: none;
+    top: 130vh;
+    z-index: -1;
+    transform: scale(1.5);
+}
+
+
+.shadowOne{
+    border-radius: 588px;
+    width: 666px;
+    height: 666px;
+    opacity: 0.65;
+    background: radial-gradient(46.64% 46.64% at 50% 50%, #9419FB 0%, rgba(148, 25, 251, 0.00) 100%);
+    position: absolute;
+    filter: blur(44.5px);
+    right: -22%;
+    pointer-events: none;
+    z-index: -1;
+
+}
+
+.shadowTwo{
+    border-radius: 588px;
+    width: 666px;
+    height: 666px;
+    opacity: 0.65;
+    background: radial-gradient(46.64% 46.64% at 50% 50%, #9419FB 0%, rgba(148, 25, 251, 0.00) 100%);
+    position: absolute;
+    filter: blur(44.5px);
+    left: -25%;
+    pointer-events: none;
+    z-index: -1;
+
+}
+
+.shadowTree{
+    border-radius: 588px;
+    width: 666px;
+    height: 666px;
+    opacity: 0.65;
+    background: radial-gradient(46.64% 46.64% at 50% 50%, #9419FB 0%, rgba(148, 25, 251, 0.00) 100%);
+    position: absolute;
+    filter: blur(44.5px);
+    right: -20%;
+    /* bottom: 0; */
+    pointer-events: none;
+    z-index: -1;
+}
+
+.lines svg{
+    width: 100vw;
+    z-index: -1;
+}
+
+.lines2{
+    position: absolute;
+    right: 0;
+    width: 100vw;
+    pointer-events: none;
+    /* top: 100px; */
+    width: 100vw;
+}
+
+.lines2 svg{
+    right: 0px;
+    transform: scale(1.5) rotate(-20deg) translateY(50%);
+    z-index: -1;
+    top: 0;
+    max-height: 2000px;
+    position: absolute;
+}
+
+.SeasonTicket{
+    display: flex;
+    justify-content: space-between;
+
+    &El{
+        padding: 40px 0;
+        width: calc(100% / 3);
+        span{
+            color: #4A0EB9;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        &Last{
+            width: unset;
+        }
+
+        p{
+            max-width: 320px;
+            font-size: 28px;
+        }
+    }
+
+    &Line{
+        border-top: 1px solid #4A0EB980;
+        border-bottom: 1px solid #4A0EB980;
+    }
+
+    &Button{
+        background: #4A0EB9;
+        color: #FFF;
+        max-width: 315px;
+        width: 100%;
+        border-radius: 50px;
+        border: 2px solid #4A0EB9;
+        height: 56px;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &Container{
+            width: 100%;
+            display: flex;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 32px;
+        }
+
+        
+        &:hover{
+            background: #FFF;
+            color: #4A0EB9;
+            padding-left: 10px;
+        }
+
+        &::before{
+            content: "";
+            background: url("../../../public/icons/buttonAnim.svg");
+            width: 146px;
+            position: absolute;
+            height: 148px;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-size: 60%; */
+            right: -105px;
+            transition: 0.5s;
+        }
+
+
+        &::after{
+            content: "";
+            background: url("../../../public/icons/buttonAnim.svg");
+            width: 146px;
+            position: absolute;
+            height: 148px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;
+            left: -105px;
+            transition: 0.5s;
+        }
+
+        &:hover::before{
+            right: -55px;
+            transition: 0.5s;
+        }
+
+        &:hover::after{
+            left: -75px;
+            transition: 0.5s;
+        }
+    }
+}
+
+.videoMobile{
+    display: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.videoDesktop{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    //border-radius: 0 0 50px 50px;
+}
+
+.SeasonTicketMobile{
+    display: none;
+}
+
+.pricesCardMobile{
+    display: none;
+}
+
+
+@media (max-width: 1600px) {
+    .shadowOne{
+        right: -26%;
+    }
+
+    .shadowTwo{
+        left: -26%;
+
+    }
+
+    .shadowTree{
+        right: -25%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .shadowOne{
+        right: -25%;
+        width: 500px;
+        height: 500px;
+    }
+
+    .shadowTwo{
+        left: -28%;
+        width: 500px;
+        height: 500px;
+        margin-top: 300px;
+    }
+
+    .shadowTree{
+        right: -28%;
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .contact{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .contactLeft{
+        width: 100%;
+        height: 420px;
+        margin: 0;
+    }
+
+    .contactRight{
+        width: 100%;
+    }
+
+    .homeText{
+        h1{
+            font-size: 60px;
+            margin-bottom: 24px;
+        }
+
+        p{
+            font-size: 22px;
+        }
+    }
+
+    .ColoredCard{
+        flex-wrap: wrap;
+    }
+
+    .pricesCardTariffPriceMini{
+        font-size: 27px;
+    }
+
+    .shadowOne{
+        right: -25%;
+        width: 400px;
+        height: 400px;
+        margin-top: 150px;
+    }
+
+    .shadowTwo{
+        margin-top: 500px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .shadowTree{
+        width: 400px;
+        height: 400px;
+        margin-top: 550px;
+    }
+}
+
+@media (max-width:1000px) {
+
+    .shadowOne{
+        display: none;
+    }
+
+    .shadowTwo{
+        display: none;
+    }
+
+    .shadowTree{
+        display: none;
+    }
+
+    .container{
+        width: 730px;
+    }
+
+    .clients{
+        flex-direction: column;
+    }
+
+    .clients__el{
+        width: 100%;
+    }
+
+    .homeText{
+        h1{
+            font-size: 50px;
+            margin-bottom: 24px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+
+    .twoColums{
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+
+        p{
+            width: 100%;
+            padding: 0 30px;
+            text-align: center;
+        }
+
+        a{
+            width: 80%;
+        }
+    }
+
+    .SeasonTicket{
+        display: none;
+    }
+
+    .SeasonTicketMobile{
+        display: flex;
+    }
+
+    .SeasonTicketEl{
+        width: 50%;
+        max-width: 370px;
+
+        b{
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+    }
+
+    .SeasonTicketElLast{
+        width: unset;
+    }
+
+    .pricesCardMobile{
+        display: block;
+    }
+
+    .pricesCard{
+        display: none;
+    }
+
+    .homeText{
+        p{
+            padding-right: 100px;
+        }
+    }
+}
+
+  
+@media (max-width:768px) {
+    .contactSocials{
+        margin: 20px 0;
+    }
+
+    .contactButtons{
+        flex-direction: column;
+        margin-bottom: 30px;
+        gap: 10px;
+    }
+
+    .contactButtons p{
+        font-size: 20px;
+    }
+
+    .contactInfo{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .contactRight p{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .lines{
+        display: none;
+    }
+
+    .lines2{
+        display: none;
+    }
+
+    .bronButton{
+        font-size: 18px !important;
+        display: block !important;
+    }
+
+    .contactSocialsMobile{
+        display: block;
+    }
+
+
+    .contactRight a:not(.contactSocials a){
+        display: none;
+    }
+
+    .videoMobile{
+        display: block;
+    }
+    
+    .videoDesktop{
+        display: none;
+    }
+
+    .homeText{
+        h1{
+            font-size: 35px;
+            margin-bottom: 24px;
+        }
+
+        p{
+            font-size: 18px;
+            max-width: 95%;
+        }
+    }
+
+    .Location{
+        flex-direction: column;
+    }
+
+    .clients{
+        margin-bottom: 20px;
+    }
+
+    .ColoredCard{
+        margin-bottom: 20px;
+    }
+
+    .twoColums{
+        margin-bottom: 20px;
+    }
+
+    .twoColums{
+        a{
+            width: 90%;
+        }
+    }
+}
+  
+@media (max-width:576px) {
+
+    .homeText{
+        p{
+            padding-right: 0px;
+        }
+    }
+
+    .container{
+        width: 96%;
+    }
+
+    .clients__el{
+        height: 130px;
+    }
+
+    .clients__el p{
+        font-size: 34px;
+    }
+
+    .contactInfo,
+    .contactRight p{
+        max-width: 300px;
+        width: 100%;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .contactSocialsMobile{
+        display: none !important;
+    }
+
+    .contactRight a:not(.contactSocialsMobile){
+        display: block !important;
+    }
+
+    .contactLeft{
+        height: 320px;
+    }
+
+    .SeasonTicketMobile{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .SeasonTicketEl{
+        padding: 0;
+        width: 100%;
+        max-width: unset;
+
+        b{
+            font-size: 22px;
+        }
+
+        p{
+            max-width: unset;
+            width: 100%;
+            font-size: 18px;
+            line-height: 1.1;
+        }
+    }
+
+    .SeasonTicketMobileMargin{
+        margin-top: 12px;
+    }
+
+    .SeasonTicketEl{
+        span{
+            font-size: 24px;
+        }
+    }
+
+    .twoColums{
+        font-size: 20px;
+    }
+
+    .SeasonTicket{
+        padding: 20px 0;
+    }
+
+    .pricesCard{
+        display: flex;
+        flex-direction: column;
+        gap: 95px;
+        align-items: center;
+    }
+
+    .pricesCardTariff{
+        width: 95%;
+
+        b{
+            font-size: 24px;
+        }
+    }
+
+    .pricesCardTariffCenter{
+        top: 0 !important;
+    }
+
+    .pricesCardTariffPriceMiniPadding{
+        margin-bottom: 30px;
+    }
+
+    .pricesCardTariffPriceMini{
+        justify-content: flex-start;
+        display: flex;
+        width: 100%;
+    }
+
+    
+.twoColums{
+    p{
+        color: #000000;
+        font-size: 22px;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        background: #4A0EB9;
+        color: #FFF;
+        width: 90%;
+        height: 90px;
+        position: relative;
+        border: 4px solid #4A0EB9;
+        transition: all 0.5s;
+
+        
+        &:hover{
+            background: #FFF;
+
+            span{
+                color: #4A0EB9;
+            }
+
+            svg{
+                padding-left: 10px;
+                width: 60px;
+            }
+
+            svg path{
+                fill: #4A0EB9;
+            }
+        }
+
+        svg{
+            position: absolute;
+            left: 28px;
+            width: 50px;
+            transition: all 0.4s;
+        }
+
+        svg path{
+            fill: #FFF;
+            transition: all 0.5s;
+        }
+
+        span{
+            color: #FFF;
+            font-weight: 900;
+            font-size: 18px;
+            text-transform: uppercase;
+            padding-left: 70px;
+        }
+    }
+}
+}

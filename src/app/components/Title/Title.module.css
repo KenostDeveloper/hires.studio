@@ -1,0 +1,38 @@
+.title{
+    color: #4A0EB9;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%;
+    font-family: 'cygre-black', sans-serif;
+    padding: 60px 0 50px 0;
+    max-width: 680px;
+}
+
+.padding{
+    padding-top: 0;
+}
+
+@media (max-width:1000px) {
+    .title{
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .title{
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%;
+    }
+}
+
+@media (max-width:576px) {
+    .title{
+        font-size: 40px;
+        padding: 40px 0 30px 0;
+    }
+}

@@ -1,0 +1,1359 @@
+.imgMain{
+    width: 800px;
+    height: 650px;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgMain h1{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%; /* 100px */
+    letter-spacing: 12px;
+    color: #FFF;
+    z-index: 1;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.imgMain h1 span{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%; /* 37.5px */
+    letter-spacing: 1.5px;
+}
+
+.imgMain img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgMain:before{
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 74.15%, rgba(0, 0, 0, 0.00) 169.41%);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 1;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 145px;
+}
+
+.mainLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.showPhoto{
+    width: 365px;
+    height: 370px;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.showPhoto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showPhoto p{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%;
+    color: #FFF;
+    position: absolute;
+    z-index: 1;
+    top: 125px;
+    text-transform: uppercase;
+    transition: all 0.7s;
+}
+
+.showPhoto svg{
+    position: absolute;
+    top: 230px;
+    width: 167px;
+    height: 24px;
+    left: 96px;
+    transition: all 0.4s;
+}
+
+.showPhoto:hover svg{
+    width: 177px;
+}
+
+.showPhoto::after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    border: 3px solid #FFF;
+    position: absolute;
+    transition: all 0.4s;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    opacity: 0;
+}
+
+.showPhoto:hover::after{
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    opacity: 1;
+    border-radius: 40px;
+}
+
+.showPhoto:before{
+    content: "";
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.60) 8.82%, rgba(0, 0, 0, 0.00) 176.16%);
+
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.mainButtonOne{
+    cursor: pointer;
+    width: 100%;
+    height: 115px;
+    border-radius: 50px;
+    background: #4A0EB9;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    font-family: 'cygre-black', sans-serif;
+    transition: 0.4s;
+    border: 4px solid #4A0EB9;
+    position: relative;
+    overflow: hidden;
+}
+
+.mainButtonOne:hover{
+    background: #FFF;
+    color: #4A0EB9;
+    padding-left: 10px;
+}
+
+.mainButtonOne::before{
+    content: "";
+    background: url("./../../public/icons/buttonAnim.svg");
+    width: 146px;
+    position: absolute;
+    height: 148px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: 60%; */
+    right: -105px;
+    transition: 0.5s;
+}
+
+
+.mainButtonOne::after{
+    content: "";
+    background: url("./../../public/icons/buttonAnim.svg");
+    width: 146px;
+    position: absolute;
+    height: 148px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    left: -105px;
+    transition: 0.5s;
+}
+
+.mainButtonOne:hover::before{
+    right: -55px;
+    transition: 0.5s;
+}
+
+.mainButtonOne:hover::after{
+    left: -75px;
+    transition: 0.5s;
+}
+
+.mainButtonTwo{
+    width: 100%;
+    height: 115px;
+    border-radius: 50px;
+    background: #FFF;
+    border: 4px solid #4A0EB9;
+    color: #4A0EB9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'cygre-black', sans-serif;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.mainButtonTwo::before{
+    content: "";
+    background: url("./../../public/icons/buttonAnimTwo.svg");
+    width: 228px;
+    height: 81px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: 60%; */
+    left: -195px;
+    top: -48px;
+    transform: rotate(30deg) scale(0.8) translate3d(10px, 10px, 10px);
+    transition: 0.7s;
+}
+
+.mainButtonTwo:hover::before{
+    left: -70px;
+    top: 32px;
+    transform: rotate(30deg) scale(0.8) translate3d(10px, 10px, 10px);
+}
+
+.mainButtonTwo:hover::after{
+    right: -79px;
+    top: 0px;
+    transform: rotate(30deg);
+}
+
+.mainButtonTwo::after{
+    content: "";
+    background: url("./../../public/icons/buttonAnimTwo.svg");
+    width: 228px;
+    height: 81px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: 60%; */
+    right: -213px;
+    top: 82px;
+    transform: rotate(30deg);
+    transition: 0.7s;
+}
+
+
+.mainPlay{
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    right: 80px;
+    bottom: 80px;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainPlay img{
+    width: 28px;
+    height: 30px;
+    transition: all 0.4s;
+}
+
+.mainPlay:hover img{
+    transform: scale(2) translateX(3px);
+}
+
+.lines{
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    pointer-events: none;
+    top: 150px;
+    transform: scale(1.5);
+}
+
+.lines svg{
+    width: 100vw;
+    z-index: -1;
+}
+
+.lines2{
+    position: absolute;
+    right: 0;
+    width: 100vw;
+    pointer-events: none;
+    /* top: 100px; */
+    width: 100vw;
+}
+
+.lines2 svg{
+    right: 0px;
+    transform: scale(1.5) rotate(-20deg) translateY(50%);
+    z-index: -1;
+    top: 0;
+    max-height: 2000px;
+    position: absolute;
+}
+
+.kenost{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 40px;
+    z-index: 1;
+}
+
+.fact{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 0;
+    margin-bottom: 50px;
+}
+
+.fact__el{
+    display: flex;
+    gap: 20px;
+    width: 50%;
+    align-items: flex-start;
+}
+
+.fact__center{
+    align-items: center;
+}
+
+.fact p{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+}
+
+/* .fact p a{
+    text-decoration: underline;
+    color: #4A0EB9;
+} */
+
+.fact_a{
+    text-decoration: underline;
+    color: #4A0EB9;
+    cursor: pointer;
+}
+
+.fact__el img{
+    width: 50px;
+    height: 50px;
+}
+
+.swiperServices{
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+.swiperServices .swiper{
+    height: 100% !important;
+}
+
+.swiper-pagination{
+    position: relative !important;
+    top: 50px !important;
+}
+
+.turnkey{
+    padding: 50px 70px 80px 70px;
+    background-image: url("/bg/turnkey1.png");
+    border-radius: 50px;
+    margin-top: 100px;
+    
+}
+
+.turnkeyContainer{
+    display: flex;
+}
+
+.turnkey h2{
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%;
+    color: #FFF;
+    font-family: 'cygre-black', sans-serif;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.turnkeyLeft{
+    width: 40%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.turnkeyLeft h4{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%;
+    color: #FFF;
+    font-family: 'cygre-black', sans-serif;
+}
+
+.turnkeyLeft p{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    color: #FFF;
+    font-family: 'cygre-black', sans-serif;
+    width: 200px;
+}
+
+.turnkeyRight{
+    padding: 20px 0 20px 70px;
+    border-left: 3px solid #FFF;
+    width: 60%;
+}
+
+.turnkeyRight p{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: #fff;
+    margin-top: 25px;
+}
+
+.turnkeyRight b{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 125%;
+    color: #fff;
+}
+
+.mb{
+    margin-bottom: 80px;
+}
+
+.turnkeyTwo{
+    padding: 100px 70px 100px 70px;
+    background-image: url("/bg/turnkey2.png");
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.turnkeyTree{
+    padding: 100px 70px 100px 70px;
+    background-image: url("/bg/turnkey3.png");
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.contact{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.contactRight{
+    width: 35%;
+    padding: 30px 0;
+}
+
+.contactLeft{
+    width: 65%;
+    margin-right: 30px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.contactSocials{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0 40px 0;
+}
+
+.contactSocials a svg{
+    width: 44px;
+    height: 44px;
+    fill: #312C2C;
+    transition: all 0.5s;
+}
+
+.contactSocials a:hover svg{
+    fill: #4A0EB9;
+    transform: scale(1.2);
+}
+
+.contactRight p{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #312C2C;
+}
+
+.contactRight a{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #312C2C;
+    font-family: 'cygre-black', sans-serif;
+    transition: all 0.5s;
+}
+
+.contactRight a:hover{
+    color: #4A0EB9;
+}
+
+.contactMap{
+    width: 100%;
+    height: 100%;
+}
+
+.bronButton{
+    font-size: 20px !important;
+    font-style: normal;
+    font-weight: 900 !important;
+    line-height: 100% !important;
+    color: #4A0EB9 !important;
+    display: flex;
+    align-items: center;
+    gap: 8px !important;
+    margin-top: 30px !important;
+    cursor: pointer;
+}
+
+.bronButton img{
+    width: 81px;
+    height: 16px;
+    transition: all 0.5s;
+}
+
+.bronButton:hover img{
+    height: 16px;
+    width: 120px;
+    transform: scale(1.2);
+}
+
+
+.shadowOne{
+    border-radius: 588px;
+    width: 666px;
+    height: 666px;
+    opacity: 0.65;
+    background: radial-gradient(46.64% 46.64% at 50% 50%, #9419FB 0%, rgba(148, 25, 251, 0.00) 100%);
+    position: absolute;
+    filter: blur(44.5px);
+    right: -22%;
+    pointer-events: none;
+    z-index: -1;
+
+}
+
+.shadowTwo{
+    border-radius: 588px;
+    width: 666px;
+    height: 666px;
+    opacity: 0.65;
+    background: radial-gradient(46.64% 46.64% at 50% 50%, #9419FB 0%, rgba(148, 25, 251, 0.00) 100%);
+    position: absolute;
+    filter: blur(44.5px);
+    left: -25%;
+    pointer-events: none;
+    z-index: -1;
+
+}
+
+.shadowTree{
+    border-radius: 588px;
+    width: 666px;
+    height: 666px;
+    opacity: 0.65;
+    background: radial-gradient(46.64% 46.64% at 50% 50%, #9419FB 0%, rgba(148, 25, 251, 0.00) 100%);
+    position: absolute;
+    filter: blur(44.5px);
+    right: -20%;
+    /* bottom: 0; */
+    pointer-events: none;
+    z-index: -1;
+}
+
+.main{
+    overflow-x: hidden;
+    width: 100vw;
+    position: relative;
+}
+
+.mainButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contactButtons p{
+    font-family: 'cygre-black', sans-serif;
+    color: #4A0EB9;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.contactButtons{
+    display: flex;
+    gap: 26px;
+    margin-bottom: 50px;
+}
+
+.contactInfo{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #312C2C;
+    margin-bottom: 20px;
+}
+
+.contactSocialsMobile{
+    display: none;
+}
+
+.clients{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.clients__el{
+    width: calc(50% - 10px);
+    height: 230px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.clients__el:hover::before{
+    background-color: rgba(74, 14, 85, 0.70);
+}
+
+.clients__el::before{
+    background-color: rgba(0, 0, 0, 0.60);
+    transition: all 0.5s;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.clients__el img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clients__el p{
+    position: absolute;
+    font-family: 'cygre-black', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFF;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+.ClientBack{
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+
+.SeasonTicket{
+    display: flex;
+    justify-content: space-between;
+
+    &El{
+        padding: 40px 0;
+        width: calc(100% / 3);
+        span{
+            color: #4A0EB9;
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        &Last{
+            width: unset;
+        }
+
+        p{
+            max-width: 320px;
+            font-size: 28px;
+        }
+    }
+
+    &Line{
+        border-top: 1px solid #4A0EB980;
+        border-bottom: 1px solid #4A0EB980;
+    }
+
+    &Button{
+        background: #4A0EB9;
+        color: #FFF;
+        max-width: 315px;
+        width: 100%;
+        border-radius: 50px;
+        border: 2px solid #4A0EB9;
+        height: 56px;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &Container{
+            width: 100%;
+            display: flex;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 32px;
+        }
+
+        
+        &:hover{
+            background: #FFF;
+            color: #4A0EB9;
+            padding-left: 10px;
+        }
+
+        &::before{
+            content: "";
+            background: url("./../../public/icons/buttonAnim.svg");
+            width: 146px;
+            position: absolute;
+            height: 148px;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-size: 60%; */
+            right: -105px;
+            transition: 0.5s;
+        }
+
+
+        &::after{
+            content: "";
+            background: url("./../../public/icons/buttonAnim.svg");
+            width: 146px;
+            position: absolute;
+            height: 148px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;
+            left: -105px;
+            transition: 0.5s;
+        }
+
+        &:hover::before{
+            right: -55px;
+            transition: 0.5s;
+        }
+
+        &:hover::after{
+            left: -75px;
+            transition: 0.5s;
+        }
+    }
+}
+
+.SeasonTicketMobile{
+    display: none;
+}
+
+
+@media (max-width: 1600px) {
+    .shadowOne{
+        right: -26%;
+    }
+
+    .shadowTwo{
+        left: -26%;
+
+    }
+
+    .shadowTree{
+        right: -25%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .shadowOne{
+        right: -25%;
+        width: 500px;
+        height: 500px;
+    }
+
+    .shadowTwo{
+        left: -28%;
+        width: 500px;
+        height: 500px;
+        margin-top: 300px;
+    }
+
+    .shadowTree{
+        right: -28%;
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .mainLeft{
+        flex-direction: row;
+        width: 800px;
+    }
+
+    .mainButtons{
+        width: 375px;
+    }
+
+    .showPhoto{
+        height: 255px;
+    }
+
+    .showPhoto p{
+        top: 45%;
+        transform: translate(0, -50%);
+    }
+
+    .showPhoto svg{
+        top: calc(45% + 70px);
+        transform: translate(0, -50%);
+    }
+
+    .shadowOne{
+        right: -25%;
+        width: 400px;
+        height: 400px;
+        margin-top: 150px;
+    }
+
+    .turnkey h2{
+        font-size: 60px;
+    }
+
+    .shadowTwo{
+        margin-top: 500px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .contact{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .contactLeft{
+        width: 100%;
+        height: 420px;
+        margin: 0;
+    }
+
+    .contactRight{
+        width: 100%;
+    }
+
+    .shadowTree{
+        width: 400px;
+        height: 400px;
+        margin-top: 550px;
+    }
+}
+
+@media (max-width:1000px) {
+
+    .container{
+        width: 730px;
+    }
+    
+    .imgMain{
+        width: 100%;
+    }
+
+    .imgMain h1{
+        font-size: 70px;
+        left: 40px;
+    }
+
+    .mainLeft{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mainButtons{
+        width: 100%;
+    }
+
+    .showPhoto{
+        width: 100%;
+        height: 115px;
+        margin-top: 25px;
+    }
+
+    .showPhoto svg{
+        display: none;
+    }
+
+    .showPhoto p br{
+        display: none;
+    }
+
+    .showPhoto p{
+        top: 50%;
+    }
+
+    .fact{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fact__el{
+        width: 75%;
+    }
+
+    .shadowOne{
+        display: none;
+    }
+
+    .shadowTwo{
+        display: none;
+    }
+
+    .shadowTree{
+        display: none;
+    }
+
+    .swiperServices{
+        height: 100%;
+    }
+
+    .turnkey{
+        padding: 40px 70px;
+    }
+
+    .turnkeyTwo{
+        padding: 40px 70px;
+    }
+
+    .turnkeyTree{
+        padding: 40px 70px;
+    }
+
+    .turnkey h2{
+        text-align: left;
+        margin-bottom: 80px;
+    }
+
+    .turnkeyContainer{
+        flex-direction: column;
+    }
+
+    .turnkeyLeft{
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 75px;
+    }
+
+    .turnkeyRight{
+        width: 100%;
+    }
+
+    .clients{
+        flex-direction: column;
+    }
+
+    .clients__el{
+        width: 100%;
+    }
+
+    .SeasonTicket{
+        display: none;
+    }
+
+    .SeasonTicketMobile{
+        display: flex;
+    }
+}
+
+  
+@media (max-width:768px) {
+    .container{
+        width: 560px;
+    }
+
+    .imgMain{
+        height: 530px;
+    }
+
+    .imgMain h1{
+        left: 0;
+        width: 100%;
+        font-size: 50px;
+        text-align: center;
+        letter-spacing: 7.5px;
+        gap: 25px;
+    }
+
+    .imgMain h1 span{
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%; /* 30px */
+        letter-spacing: 1.2px;
+        text-transform: none;
+    }
+
+    .mainPlay{
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 65px;
+    }
+
+    .fact p{
+        font-size: 20px;
+    }
+
+    .lines{
+        display: none;
+    }
+
+    .turnkey h2{
+        text-align: center;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%;
+    }
+
+    .turnkeyLeft h4{
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%;
+    }
+
+    .turnkeyLeft p{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+    }
+
+    .turnkeyRight{
+        padding: 0px;
+        border-left: none;
+    }
+
+    .turnkey{
+        padding: 60px;
+    }
+
+    .turnkeyLeft{
+        margin-bottom: 60px;
+    }
+
+    .mb{
+        margin-bottom: 50px;
+    }
+
+    .turnkeyRight p{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+    }
+
+    .turnkeyRight b{
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%;
+    }
+
+    .contactSocials{
+        margin: 20px 0;
+    }
+
+    .contactButtons{
+        flex-direction: column;
+        margin-bottom: 30px;
+        gap: 10px;
+    }
+
+    .contactButtons p{
+        font-size: 20px;
+    }
+
+    .contactInfo{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .contactRight p{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .bronButton{
+        font-size: 18px !important;
+        display: block !important;
+    }
+
+    .contactSocialsMobile{
+        display: block;
+    }
+
+
+    .contactRight a:not(.contactSocials a){
+        display: none;
+    }
+
+
+}
+  
+@media (max-width:576px) {
+    .container{
+        width: 96%;
+    }
+
+    .main{
+        margin-top: 100px;
+    }
+
+    .imgMain h1{
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%; /* 37.5px */
+        letter-spacing: 4.5px;
+    }
+
+    .imgMain h1 span{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%; /* 20px */
+        letter-spacing: 0.8px;
+    }
+
+    .mainButtonTwo,
+    .showPhoto,
+    .mainButtonOne{
+        height: 85px;
+    }
+
+    .fact__el{
+        width: 90%;
+    }
+
+    .mainButtons{
+        gap: 20px;
+    }
+
+    .showPhoto{
+        margin-top: 20px;
+    }
+
+    .turnkeyTwo,
+    .turnkeyTree,
+    .turnkey{
+        padding: 60px 20px;
+    }
+
+    .turnkey h2{
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%;
+        margin-bottom: 50px;
+    }
+
+    .turnkeyLeft{
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .turnkeyLeft h4{
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%
+    }
+
+    .turnkeyLeft p{
+        width: 100%;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+    }
+
+    .turnkeyRight p{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        margin-top: 16px;
+    }
+
+    .turnkeyRight b{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 125%;
+    }
+
+    .mb{
+        margin-top: 20px;
+    }
+
+    .contactInfo,
+    .contactRight p{
+        max-width: 300px;
+        width: 100%;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .contactSocialsMobile{
+        display: none !important;
+    }
+
+    .contactRight a:not(.contactSocialsMobile){
+        display: block !important;
+    }
+
+    .contactLeft{
+        height: 320px;
+    }
+
+    .clients__el{
+        height: 130px;
+    }
+
+    .clients__el p{
+        font-size: 34px;
+    }
+
+    .SeasonTicketMobile{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .SeasonTicketEl{
+        padding: 0;
+        width: 100%;
+        max-width: unset;
+
+        b{
+            font-size: 22px;
+        }
+
+        p{
+            max-width: unset;
+            width: 100%;
+            font-size: 18px;
+            line-height: 1.1;
+        }
+    }
+
+    .pricesCardTariffPriceMini{
+        justify-content: flex-start;
+        display: flex;
+        width: 100%;
+    }
+
+    .SeasonTicketMobileMargin{
+        margin-top: 12px;
+    }
+
+    .SeasonTicketEl{
+        span{
+            font-size: 24px;
+        }
+    }
+
+    .SeasonTicket{
+        padding: 20px 0;
+    }
+}

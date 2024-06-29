@@ -1,0 +1,13 @@
+/node_modules
+/.next/
+/out/
+/build
+/public/images
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+next-env.d.ts
+
+#

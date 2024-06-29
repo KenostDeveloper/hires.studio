@@ -1,0 +1,223 @@
+.faqQuestion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0 20px 0;
+    border-bottom: 2px solid #312C2C;
+    cursor: pointer;
+    position: relative;
+}
+
+.faqQuestion p{
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    font-family: 'cygre-black', sans-serif;
+}
+
+.faqQuestion img{
+    width: 30px;
+    height: 30px;
+    transform: rotate(-90deg);
+    transition: all 0.4s;
+}
+
+.textSelect{
+    color: #4A0EB9;
+}
+
+.faqImage{
+    transform: rotate(0deg) !important;
+}
+
+.faqContent{
+    font-family: 'cygre-black', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-top: 8px;
+    max-height: 0;
+}
+
+.faqQuestion::before{
+    width: 0%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    background: #4A0EB9;
+    bottom: -2px;
+    transition: all 0.4s;
+}
+
+.faqEl.active .faqQuestion::before{
+    width: 100%;
+    height: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    background: #4A0EB9;
+    bottom: -2px;
+    transition: all 0.4s;
+    animation: animate 0.5s linear; 
+}
+
+@keyframes animate { 
+    0% { 
+        width: 0; 
+    } 
+
+    100% { 
+        width: 100%; 
+    } 
+} 
+
+.faqContent.active{
+    margin-top: 30px;
+}
+
+.faqCard{
+    display: flex;
+    gap: 40px;
+    align-items: center; 
+}
+
+.faqCard + .faqCard{
+    margin-top: 20px;
+}
+
+.faqCard{
+    margin-top: 2px;
+}
+
+.faqCardImg{
+    width: 400px;
+    height: 225px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.faqCardImg img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.faqCardImg:hover img{
+    transform: scale(1.1)
+}
+
+.faqCard p{
+    width: calc(100% - 400px);
+}
+
+.FaqPrice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FaqPrice p{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    font-family: 'cygre-black', sans-serif;
+}
+
+.FaqPrice + .FaqPrice{
+    margin-top: 20px;
+}
+
+.FaqPrice b{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    font-family: 'cygre-black', sans-serif;
+
+}
+
+
+.FaqPrice p{
+    width: 80%;
+}
+
+
+@media (max-width:1000px) {
+    .faqCardImg{
+        width: 300px;
+    }
+
+    .faqCard{
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .faqCard p{
+        width: calc(100% - 324px);
+    }
+}
+
+@media (max-width:768px) {
+    .faqCard{
+        flex-direction: column;
+    }
+
+    .faqCardImg{
+        width: 100%;
+    }
+
+    .faqCard p{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .faqQuestion p{
+        font-size: 28px;
+    }
+
+    .FaqPrice p{
+        font-size: 20px;
+    }
+
+    .FaqPrice b{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:576px) {
+    .faqQuestion p{
+        font-size: 20px;
+    }
+
+    .faqQuestion img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .faqQuestion{
+        padding: 26px 0 16px 0;
+        border-bottom: 1px solid #312C2C;
+    }
+    
+    .faqCard p{
+        font-family: 16px;
+        line-height: 1.1;
+    }
+
+    .FaqPrice p{
+        font-size: 16px;
+        width: 70%;
+    }
+
+    .FaqPrice b{
+        font-size: 16px;
+    }
+}

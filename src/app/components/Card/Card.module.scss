@@ -1,0 +1,137 @@
+.ColoredCard{
+    padding: 30px 12px;
+    background: #EEF5FF;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 15px;
+
+    img{
+        width: 35px;
+        height: 35px;
+        margin-bottom: 16px;
+    }
+
+    b{
+        margin-bottom: 24px;
+        color: #312C2C;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29.05px;
+    }
+
+    p{
+        color: #312C2C;
+        font-size: 18px;
+        line-height: 21.78px;
+    }
+
+    &Flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    b{
+        max-width: 260px;
+    }
+}
+
+.TransparentCard{
+    padding: 30px 12px;
+    border: 1px solid #4A0EB9;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 15px;
+
+    img{
+        width: 35px;
+        height: 35px;
+        margin-bottom: 16px;
+    }
+
+    b{
+        margin-bottom: 24px;
+        color: #312C2C;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29.05px;
+        padding-right: 90px;
+    }
+
+    p{
+        color: #312C2C;
+        font-size: 18px;
+        line-height: 21.78px;
+    }
+
+    &Flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    b{
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .ColoredCard{
+       width: calc(50% - 10px);     
+    }
+
+    .TransparentCard{
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width:768px) {
+    .ColoredCard{
+        width: 100%;  
+        
+        &Flex{
+            flex-direction: row;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 16px;
+
+            img{
+                margin: 0;
+            }
+
+            b{
+                margin:  0;
+                line-height: 1.1;
+            }
+        }
+
+        b{
+            max-width: 260px;
+        }
+    }
+ 
+    .TransparentCard{
+        width: 100%;
+
+        &Flex{
+            flex-direction: row;
+            gap: 16px;      
+            align-items: center;
+            margin-bottom: 16px;
+
+
+            img{
+                margin: 0;
+            }
+
+            b{
+                margin:  0;
+                line-height: 1.1;
+            }
+        }
+
+        b{
+            max-width: 260px;
+        }
+    }
+}

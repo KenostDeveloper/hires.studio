@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+sitemap: https://hires.studio/sitemap.xml
+Disallow: /admin
+Disallow: /privacy
+Disallow: /page43007667.html
+Host: hires.studio

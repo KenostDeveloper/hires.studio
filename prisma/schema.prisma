@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String?
+  provider          String
+  password          String?
+  providerAccountId String?
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  image String?
+  username      String?   @unique
+  emailVerified DateTime?
+  role String @default("USER")
+  accounts      Account[]
+  sessions      Session[]
+}
+
+model Photo{
+  id         String    @id @default(cuid())
+  name String @unique
+  alt String?
+}
+
+model Video{
+  id         String    @id @default(cuid())
+  image String
+  iframeLink String
+  type Type
+}
+
+enum Type {
+  Podcasts
+  LiveBroadcasts
+  Interview
+  ConversationalVideos
+}
+
+model CategoryPrice{
+  id         String    @id @default(cuid())
+  name String?
+  prices Prices[]
+}
+
+model Prices{
+  id         String    @id @default(cuid())
+  name String?
+  price String?
+  categoryPrice CategoryPrice @relation(fields: [idCategoryPrice], references: [id], onDelete: Cascade)
+  idCategoryPrice String
+}
