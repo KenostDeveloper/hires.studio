@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
  
 // app.use("/static", express.static("public"));
-app.use("/static", express.static("./public"));
+app.use("/image", express.static("./public"));
  
 app.use("/", function(_, response){
      
