@@ -21,7 +21,7 @@ const SwiperJS = ({setModal}: any) => {
             slidesPerView={1}
             centeredSlides={true}
             loop={true}
-            // autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 3000 }}
 
             breakpoints={{
                 0: {

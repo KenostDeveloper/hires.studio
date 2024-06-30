@@ -125,6 +125,20 @@
     fill: #4BDF63 !important;
 }
 
+.inst {
+    width: 22px;
+    height: 22px;
+}
+
+.inst svg g path{
+    fill: #312C2C;
+    transition: all 0.3s;
+}
+
+.inst svg:hover g path{
+    fill: #dc2743 !important;
+}
+
 .nav.fixed{
     height: 65px;
     padding-top: 0px;

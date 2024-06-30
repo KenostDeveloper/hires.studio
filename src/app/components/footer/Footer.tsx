@@ -10,6 +10,7 @@ const Footer = () => {
                 <div className="footerLeft">
                     <p>ИП МЕРЕНКОВ ДЕНИС ИГОРЕВИЧ</p>
                     <Link href="/privacity" className="footerLink">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</Link>
+                    <Link target='_blank' href="/files/ofert.pdf" className="footerLink">ДОГОВОР ОФЕРТЫ</Link>
                 </div>
                 <p>2024</p>
             </div>

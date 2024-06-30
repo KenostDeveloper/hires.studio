@@ -518,6 +518,20 @@
     transition: all 0.5s;
 }
 
+.contactSocials a svg path{
+    fill: #312C2C;
+    transition: all 0.5s;
+}
+
+.LinkInstagram{
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.contactSocials a:hover svg path{
+    fill: #4A0EB9;
+}
+
 .contactSocials a:hover svg{
     fill: #4A0EB9;
     transform: scale(1.2);

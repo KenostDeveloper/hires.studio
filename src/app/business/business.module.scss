@@ -702,9 +702,7 @@
     display: none;
 }
 
-.pricesCardMobile{
-    display: none;
-}
+
 
 
 @media (max-width: 1600px) {
@@ -879,9 +877,6 @@
         width: unset;
     }
 
-    .pricesCardMobile{
-        display: block;
-    }
 
     .pricesCard{
         display: none;
