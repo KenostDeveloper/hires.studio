@@ -532,7 +532,7 @@ export default function Home() {
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
               <img src="/bg/bg8.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
-              <h1>
+              <h1 className={styles.mainH1Mini}>
               Интерьерная студия <span>в Санкт-Петербурге</span>
               </h1>
             </SwiperSlide>
