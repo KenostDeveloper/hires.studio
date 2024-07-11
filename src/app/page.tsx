@@ -18,6 +18,16 @@ import { Type } from "@prisma/client";
 import SwiperPrice from "./components/Swiper/SwiperPrice";
 import Packet from "./components/Packet/Packet";
 
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import {Pagination, Navigation, Autoplay, EffectFade  } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+
+
 
 
 export default function Home() {
@@ -179,7 +189,7 @@ export default function Home() {
     },
     {
         id: 0,
-        text: "Прайс",
+        text: "Цены и услуги",
         scrollTo: "price"
     },
     {
@@ -458,11 +468,80 @@ export default function Home() {
         {/* Первый блок */}
         <div className={`container ${styles.container}`}>
           <div className={styles.imgMain}>
-            <img src="/bg/main.jpg" alt="Студия подкастов в Санкт-Петербурге" />
+          <Swiper
+            className={styles.mainSwiper}
+            modules={[Autoplay, EffectFade]}
+            effect="fade"
+            spaceBetween={0}
+            slidesPerView={1}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{ delay: 3000 }}
+
+            breakpoints={{
+                0: {
+                  centeredSlides: true,
+                  slidesPerView: 1,
+                },
+            }}
+
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
+            >
+            <SwiperSlide className={styles.mainImage}>
+              <img className="" src="/bg/bg1.ARW" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <h1>
+              Студия подкастов <span>в Санкт-Петербурге</span>
+              </h1>
+            </SwiperSlide>
+            <SwiperSlide className={styles.mainImage}>
+              <img src="/bg/bg1.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <h1>
+              Студия подкастов <span>в Санкт-Петербурге</span>
+              </h1>
+            </SwiperSlide>
+            <SwiperSlide className={styles.mainImage}>
+              <img src="/bg/bg2.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <h1>
+              Студия подкастов <span>в Санкт-Петербурге</span>
+              </h1>
+            </SwiperSlide>
+            <SwiperSlide className={styles.mainImage}>
+              <img src="/bg/bg3.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <h1>
+              Студия подкастов <span>в Санкт-Петербурге</span>
+              </h1>
+            </SwiperSlide>
+            <SwiperSlide className={styles.mainImage}>
+              <img src="/bg/bg5.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <h1 className={styles.mainH1Mini}>
+              Интерьерная студия <span>в Санкт-Петербурге</span>
+              </h1>
+            </SwiperSlide>
+            <SwiperSlide className={styles.mainImage}>
+              <img src="/bg/bg6.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <h1 className={styles.mainH1Mini}>
+              Интерьерная студия <span>в Санкт-Петербурге</span>
+              </h1>
+            </SwiperSlide>
+            <SwiperSlide className={styles.mainImage}>
+              <img src="/bg/bg7.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <h1 className={styles.mainH1Mini}>
+              Интерьерная студия <span>в Санкт-Петербурге</span>
+              </h1>
+            </SwiperSlide>
+            <SwiperSlide className={styles.mainImage}>
+              <img src="/bg/bg8.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <h1>
+              Интерьерная студия <span>в Санкт-Петербурге</span>
+              </h1>
+            </SwiperSlide>
+          </Swiper>
+            {/* <img src="/bg/main.jpg" alt="Студия видео и звуко записи в Санкт-Петербурге" />
 
             <h1>
               Студия подкастов <span>в Санкт-Петербурге</span>
-            </h1>
+            </h1> */}
           </div>
 
           <div className={styles.mainLeft}>
@@ -472,7 +551,7 @@ export default function Home() {
               </div>
 
               <div onClick={() => scrolltoHash('price')} className={styles.mainButtonTwo}>
-                ПРАЙС
+                ЦЕНЫ И УСЛУГИ
               </div>
             </div>
 
@@ -536,10 +615,20 @@ export default function Home() {
                   <span className={styles.fact_a} onClick={() => scrolltoHash('podcast')}>создания подкаста под ключ</span>
                 </p>
               </div>
+
+              <div className={`${styles.fact__el} ${styles.fact__center}`}>
+                <img src="/icons/stream.svg" alt="" />
+                <p>Самая медийная студия, транслируем жизнь на <Link target="_blank" href="https://www.youtube.com/playlist?list=PL-KZ_UK8GyY5RKbjxrQA23nWD_U4NUSwN" className={styles.fact_a}>YouTube</Link></p>
+              </div>
+
+              <div className={`${styles.fact__el}`}>
+                <img src="/icons/comfort.svg" alt="" />
+                <p>Вам не будет жарко, ведь во всех студиях работает бесшумный кондиционер</p>
+              </div>
             </div>
 
             {/* Наши услуги */}
-            <Title id="services" text="Наши услуги" />
+            <Title id="services" text="Наши студии" />
 
             <div className={styles.swiperServices}>
               <SwiperJS setModal={setModal}/>
@@ -664,7 +753,7 @@ export default function Home() {
             <Packet setModal={setModal} modal={modal}/>
 
             {/* Прайс */}
-            <Title id="price" text="Прайс" />
+            <Title id="price" text="Цены и услуги" />
 
             <div className={styles.price}>
               <div className={styles.shadowTwo}></div>
@@ -753,7 +842,7 @@ export default function Home() {
             </div>
 
             {/* Наши клиенты / портфолио */}
-            <Title text="Наши клиенты" />
+            <Title text="Снято у нас" />
 
             {portfilioList == 0 ? 
               <div className={styles.clients}>

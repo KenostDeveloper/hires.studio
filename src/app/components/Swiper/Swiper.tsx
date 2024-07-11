@@ -21,7 +21,7 @@ const SwiperJS = ({setModal}: any) => {
             slidesPerView={1}
             centeredSlides={true}
             loop={true}
-            autoplay={{ delay: 3000 }}
+            autoplay={{ delay: 6000 }}
 
             breakpoints={{
                 0: {
@@ -57,10 +57,10 @@ const SwiperJS = ({setModal}: any) => {
             <SwiperSlide>
                 <div className={styles.slider}>
                     <div className={styles.sliderImg}>
-                    <img src="/bg/slider/podcastred.png" alt="" />
+                    <img src="/bg/bg2.JPG" alt="" />
                     </div>
                     <div className={styles.sliderText}>
-                        <h3>Аренда студии подкастов</h3>
+                        <h3>Студия подкастов</h3>
                         <p>Cтудия, оборудованная под запись видео и аудио подкастов.</p>
                         <p>В стоимость аренды входят 2 настроенных микрофона Shure sm7b, видеосвет, цветные RGB лампы и 3 видеоштатива</p>
                         <p>Исходный звук вы получаете на съемный носитель или на облако (Яндекс.Диск/Google Drive)</p>
@@ -73,10 +73,10 @@ const SwiperJS = ({setModal}: any) => {
             <SwiperSlide>
                 <div className={styles.slider}>
                     <div className={styles.sliderImg}>
-                    <img src="/bg/slider/3.jpg" alt="" />
+                    <img src="/bg/bg7.JPG" alt="" />
                     </div>
                     <div className={styles.sliderText}>
-                        <h3>Аренда интерьерной студии</h3>
+                        <h3>Интерьерная студия</h3>
                         <p>Интерьерная минималистичная фото-видеостудия, чтобы вы смогли записать видео-интервью, видео-визитку, любые разговорные видео.</p>
                         <p>В студии проведена аудиоподготовка, минимизировано эхо, установлены звукопоглощающие панели.</p>
                         <p>Аренда студии без оператора включает 2 постоянных видео-света Amaran 100 и 200 или, в случае аренды для фотосъемки предоставляется фото-свет.</p>
@@ -85,7 +85,7 @@ const SwiperJS = ({setModal}: any) => {
                     </div>
                 </div>
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
                 <div className={styles.slider}>
                     <div className={styles.sliderImg}>
                     <img src="/bg/slider/4.png" alt="" />
@@ -113,7 +113,7 @@ const SwiperJS = ({setModal}: any) => {
                         <div onClick={() => setModal(true)} className={styles.bronButton}>ЗАБРОНИРОВАТЬ <img src="/icons/lineButton.svg" alt="" /></div>
                     </div>
                 </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
         </Swiper>
     );
 };

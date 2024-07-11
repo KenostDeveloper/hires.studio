@@ -21,6 +21,7 @@
 
 .nav.fixed .logoText{
     opacity: 0;
+    width: 0;
 }
 
 .container{
@@ -41,9 +42,9 @@
     transform: scale(1.05);
 }
 
-.logo:hover .logoText{
-    opacity: 1 !important;
-}
+// .logo:hover .logoText{
+//     opacity: 1 !important;
+// }
 
 .logoText{
     margin-bottom: 7px;

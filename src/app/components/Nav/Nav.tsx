@@ -43,7 +43,7 @@ const Nav = ({setModal, textWhite, items}:any) => {
         },
         {
             id: 0,
-            text: "Прайс",
+            text: "Цены и услуги",
             link: "/#price"
         },
         {
