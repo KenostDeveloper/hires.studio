@@ -159,17 +159,39 @@
     .gallery{
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .typePhotoTitle{
+        font-size: 36px;
+    }
 }
 
 @media (max-width: 991px) {
     .gallery{
         grid-template-columns: repeat(2, 1fr);
-        margin-top: 100px;
+    }
+
+    .typePhotoTitle{
+        font-size: 26px;
+    }
+}
+
+@media (max-width:768px) {
+    .typePhotoTitle{
+        font-size: 18px;
     }
 }
   
 @media (max-width:576px) {
     .gallery{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .typePhotoTitle{
+        font-size: 14px;
+        padding: 0 6px 4px 6px;
+    }
+
+    .typePhotoTitle.active{
+        border-bottom: 2px solid #4A0EB9;
     }
 }
