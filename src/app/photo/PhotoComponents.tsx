@@ -21,23 +21,21 @@ export default function PhotoComponents() {
     const [typeText, setTypeText] = useState("");
 
     useEffect(() => {
+        if(type == 1){
+            setTypeText("ALL")
+        }else if(type == 2){
+            setTypeText("Podcaster")
+        }else if(type == 3){
+            setTypeText("Interior")
+        }else if(type == 4){
+            setTypeText("DressingRoom")
+        }
+
+        
+
         setCurrentPage(1)
         setTotalCount(1)
         setPhoto([])
-        if(type == 1){
-            setTypeText("ALL")
-            updatePhotoType("ALL")
-        }else if(type == 2){
-            setTypeText("Podcaster")
-            updatePhotoType("Podcaster")
-        }else if(type == 3){
-            setTypeText("Interior")
-            updatePhotoType("Interior")
-        }else if(type == 4){
-            setTypeText("DressingRoom")
-            updatePhotoType("DressingRoom")
-        }
-        
         setFetching(true)
         updatePhoto()
     }, [type])
@@ -57,19 +55,6 @@ export default function PhotoComponents() {
         {
             setFetching(true)
         }
-    }
-
-    function updatePhotoType(type: any) {
-        console.log("updatePhotoType")
-        axios.get(`/api/photo?limit=20&page=0&type=${typeText}`).then(res => {
-            // console.log('fetching')
-            setPhoto([...photo, ...res.data.Photo])
-            setCurrentPage(currentPage + 1)
-            setTotalCount(res.data.PhotoCount)
-        }).finally(() => {
-            setFetching(false)
-            setLoading(false)
-        });
     }
 
     function updatePhoto() {
