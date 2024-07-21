@@ -6,6 +6,7 @@ import Link from "next/link";
 import Provider from "./components/Helps/Provider";
 // import YandexMetrika from 'next-yandex-metrika'
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
 
 
 const oswald = Inter({ subsets: ["latin"] });
@@ -42,6 +43,7 @@ export default function RootLayout({
       {/* <YandexMetrika yid={9616197} clickmap={true} trackLinks={true} accurateTrackBounce={true} webvisor={true}/> */}
       <GoogleTagManager gtmId="GTM-TM23NG99" />
       <GoogleAnalytics gaId="G-25GSH2FVLW"/>
+      <Script src="//cdn.callibri.ru/callibri.js" />
     </body>
     </html>
   );
