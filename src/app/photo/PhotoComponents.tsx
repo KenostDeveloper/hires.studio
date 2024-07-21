@@ -58,6 +58,7 @@ export default function PhotoComponents() {
     }
 
     function updatePhoto() {
+        console.log("updatePhoto")
         axios.get(`/api/photo?limit=20&page=${currentPage}&type=${typeText}`).then(res => {
             // console.log('fetching')
             setPhoto([...photo, ...res.data.Photo])
