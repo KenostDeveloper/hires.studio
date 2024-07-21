@@ -31,8 +31,6 @@ export default function PhotoComponents() {
             setTypeText("DressingRoom")
         }
 
-        
-
         setCurrentPage(1)
         setTotalCount(1)
         setPhoto([])

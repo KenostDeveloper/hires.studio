@@ -393,7 +393,7 @@ export default function Photo() {
                             <div className={styles.photo} key={photo.id}>
                                 <img src={`${process.env.NEXT_PUBLIC_BASE_PATH_IMAGE}photo/${photo.name}`} alt={photo.alt} />
                                 <div>
-                                    <p>Тип: {photo.TypePhoto == null ? "Нет" : photo.TypePhoto == TypePhoto.Podcaster ? "Подкастерская" : photo.TypePhoto == TypePhoto.Interior ? "Интерьерная" : "Гримерка"}</p>
+                                    <p>Тип: {!photo.TypePhoto ? "Нет" : photo.TypePhoto == TypePhoto.Podcaster ? "Подкастерская" : photo.TypePhoto == TypePhoto.Interior ? "Интерьерная" : "Гримерка"}</p>
                                     <p>Описание: {photo.alt}</p>
                                     <div onClick={() => deletePhoto(photo.id)} className={styles.btnDelete}>Удалить</div>
                                 </div>
