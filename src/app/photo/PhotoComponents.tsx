@@ -31,10 +31,13 @@ export default function PhotoComponents() {
             setTypeText("DressingRoom")
         }
 
+        
+
         setCurrentPage(1)
         setTotalCount(1)
         setPhoto([])
         setFetching(true)
+        updatePhoto()
     }, [type])
 
     const URL = "https://hires.studio/"
@@ -47,7 +50,6 @@ export default function PhotoComponents() {
     }
     
     //Подгрузка по скролу
-
     const scrollHander = (e: any) => {
         if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100)
         {
@@ -55,17 +57,21 @@ export default function PhotoComponents() {
         }
     }
 
+    function updatePhoto() {
+        axios.get(`/api/photo?limit=20&page=${currentPage}&type=${typeText}`).then(res => {
+            // console.log('fetching')
+            setPhoto([...photo, ...res.data.Photo])
+            setCurrentPage(currentPage + 1)
+            setTotalCount(res.data.PhotoCount)
+        }).finally(() => {
+            setFetching(false)
+            setLoading(false)
+        });
+    }
+
     useEffect(() => {
         if(fetching && photo.length < totalCount){
-            axios.get(`/api/photo?limit=20&page=${currentPage}&type=${typeText}`).then(res => {
-                // console.log('fetching')
-                setPhoto([...photo, ...res.data.Photo])
-                setCurrentPage(currentPage + 1)
-                setTotalCount(res.data.PhotoCount)
-            }).finally(() => {
-                setFetching(false)
-                setLoading(false)
-            });
+            updatePhoto()
         }
     }, [fetching])
 
