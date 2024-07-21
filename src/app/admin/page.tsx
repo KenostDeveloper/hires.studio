@@ -31,6 +31,7 @@ export default function Photo() {
     //ФОТО
     const [selectedFile, setSelectedFile] = useState<File>();
     const [alt, setAlt] = useState("");
+    const [typeImage, setTypeImage] = useState<any>("");
 
     // Потфолио
     const [selectedFilePortfolio, setSelectedFilePortfolio] = useState<File>();
@@ -72,6 +73,7 @@ export default function Photo() {
             const formData = new FormData();
             formData.append("file", selectedFile);
             formData.append("alt", alt);
+            formData.append("type", typeImage);
             const res = await fetch('/api/photo', {
                 method: 'POST',
                 body: formData
@@ -376,6 +378,12 @@ export default function Photo() {
                                 }
                             }
                         }/>
+                        <p>Тип</p>
+                        <select value={typeImage} name="type" onChange={(e) => setTypeImage(e.target.value)}>
+                            <option value="DressingRoom">Гримерка</option>
+                            <option value="Podcaster">Подкастерская</option>
+                            <option value="Interior">Интерьерная</option>
+                        </select>
                         <input type="submit" value="Загрузить фото" />
                     </form>
 

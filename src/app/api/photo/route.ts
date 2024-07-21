@@ -7,6 +7,7 @@ import { getServerSession } from "next-auth/next"
 import { authOptions } from "@/lib/auth"
 import { unlinkSync } from "fs";
 import sharp from "sharp";
+import { TypePhoto } from "@prisma/client";
 
 export async function POST(req: NextRequest, res: NextResponse) {
     const session = await getServerSession(authOptions)
@@ -18,10 +19,12 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const data = await req.formData()
         const file: File | null = data.get('file') as unknown as File
         let alt = data.get('alt') as string;
+        let typePhoto = data.get('type') as TypePhoto;
     
         if(!file){
             return NextResponse.json({success: false, message: "Файл не загружен, попробуйте заного"});
         }
+
     
         const bytes = await file.arrayBuffer();
         const buffer = Buffer.from(bytes);
@@ -54,6 +57,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
             data: {
                 alt: alt,
                 name: name + ".jpeg",
+                type: typePhoto
             }
         });
     

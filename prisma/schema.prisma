@@ -55,13 +55,20 @@ model Photo{
   id         String    @id @default(cuid())
   name String @unique
   alt String?
+  type TypePhoto?
+}
+
+enum TypePhoto {
+  Interior
+  Podcaster
+  DressingRoom
 }
 
 model Video{
   id         String    @id @default(cuid())
   image String
   iframeLink String
-  type Type
+  type Type?
 }
 
 enum Type {
