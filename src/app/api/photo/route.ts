@@ -72,6 +72,7 @@ export async function GET(req: NextRequest) {
     let page = req.nextUrl.searchParams.get('page') as string
     let limit = req.nextUrl.searchParams.get('limit') as string
     let id = req.nextUrl.searchParams.get('id') as string
+    let type = req.nextUrl.searchParams.get('type') as any
 
 
     let getPage = Number(page) || 1;
@@ -86,17 +87,33 @@ export async function GET(req: NextRequest) {
         })
         return NextResponse.json({PhotoCount, Photo});
     }else{
+        if(!type || type == "ALL"){
+            const Photo = await db.photo.findMany({
+                take: getLimit,
+                skip: offset,
+                orderBy: [
+                    {
+                      id: 'desc'
+                    }
+                ]
+            })
+            return NextResponse.json({PhotoCount, Photo});
+        }else{
+            const Photo = await db.photo.findMany({
+                where: {
+                    type: type
+                },
+                take: getLimit,
+                skip: offset,
+                orderBy: [
+                    {
+                      id: 'desc'
+                    }
+                ]
+            })
+            return NextResponse.json({PhotoCount, Photo});
+        }
         
-        const Photo = await db.photo.findMany({
-            take: getLimit,
-            skip: offset,
-            orderBy: [
-                {
-                  id: 'desc'
-                }
-            ]
-        })
-        return NextResponse.json({PhotoCount, Photo});
     }
 }
 

@@ -6,7 +6,7 @@ import Loading from "../components/Helps/Loading";
 import Link from "next/link";
 import {Toaster, toast} from 'react-hot-toast'
 import axios from "axios";
-import { Type } from "@prisma/client";
+import { Type, TypePhoto } from "@prisma/client";
 import { v4 as uuidv4 } from 'uuid';
 
 export default function Photo() {
@@ -14,7 +14,8 @@ export default function Photo() {
     interface IPhoto{
         id: string,
         name: string,
-        alt: string
+        alt: string,
+        TypePhoto: TypePhoto
     }
 
     interface IPortfolio{
@@ -392,6 +393,7 @@ export default function Photo() {
                             <div className={styles.photo} key={photo.id}>
                                 <img src={`${process.env.NEXT_PUBLIC_BASE_PATH_IMAGE}photo/${photo.name}`} alt={photo.alt} />
                                 <div>
+                                    <p>Тип: {photo.TypePhoto == null ? "Нет" : photo.TypePhoto == TypePhoto.Podcaster ? "Подкастерская" : photo.TypePhoto == TypePhoto.Interior ? "Интерьерная" : "Гримерка"}</p>
                                     <p>Описание: {photo.alt}</p>
                                     <div onClick={() => deletePhoto(photo.id)} className={styles.btnDelete}>Удалить</div>
                                 </div>
