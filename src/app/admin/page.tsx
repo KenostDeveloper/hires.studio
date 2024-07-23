@@ -418,10 +418,10 @@ export default function Photo() {
                         }/>
                         <p>Тип</p>
                         <select value={addPortfolio.type} name="type" onChange={(e) => setAddPortfolio({...addPortfolio, type: e.target.value})}>
-                            <option value="Podcasts">Подкаст</option>
+                            <option value="Podcasts">Подкасты</option>
                             <option value="LiveBroadcasts">Прямой эфир</option>
                             <option value="Interview">Интервью</option>
-                            <option value="ConversationalVideos">Разговорные видео</option>
+                            <option value="ConversationalVideos">Reels/Shorts</option>
                         </select>
                         <input type="submit" value="Добавить" />
                     </form>

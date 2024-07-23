@@ -43,7 +43,12 @@ export default function RootLayout({
       {/* <YandexMetrika yid={9616197} clickmap={true} trackLinks={true} accurateTrackBounce={true} webvisor={true}/> */}
       <GoogleTagManager gtmId="GTM-TM23NG99" />
       <GoogleAnalytics gaId="G-25GSH2FVLW"/>
+      
       <Script src="//cdn.callibri.ru/callibri.js" />
+      {/* <Script src="https://www.googletagmanager.com/gtag/js?id=AW-16649332877" /> */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16649332877"
+      />
     </body>
     </html>
   );

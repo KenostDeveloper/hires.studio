@@ -847,7 +847,7 @@ export default function Home() {
             {portfilioList == 0 ? 
               <div className={styles.clients}>
                 <div className={styles.clients__el} onClick={() => setPortfolioList(1)}>
-                  <img src="/bg/portfolio/1.png" alt="Подкасты" />
+                  <img src="/bg/portfolio/1.png" alt="Разговорные видео" />
                   <p>Подкасты</p>
                 </div>
                 <div className={styles.clients__el} onClick={() => setPortfolioList(2)}>
@@ -859,8 +859,8 @@ export default function Home() {
                   <p>Интервью</p>
                 </div>
                 <div className={styles.clients__el} onClick={() => setPortfolioList(4)}>
-                  <img src="/bg/portfolio/4.png" alt="Разговорные видео" />
-                  <p>Разговорные видео</p>
+                  <img src="/bg/portfolio/5.png" alt="Reels/Shorts" />
+                  <p>Reels/Shorts</p>
                 </div>
               </div>
             : portfilioList == 1 ?
