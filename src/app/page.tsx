@@ -26,6 +26,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import SwiperPortfolioReels from "./components/Swiper/SwiperPortfolioReels";
 
 
 
@@ -884,7 +885,7 @@ export default function Home() {
             :
               <div>
                 <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
-                <SwiperPortfolio type={"ConversationalVideos"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
+                <SwiperPortfolioReels type={"ConversationalVideos"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
                 <div className={styles.shadowTree}></div>
               </div>
             }
