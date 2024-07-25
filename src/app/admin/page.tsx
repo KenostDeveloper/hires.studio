@@ -432,7 +432,7 @@ export default function Photo() {
                                 <img src={`${process.env.NEXT_PUBLIC_BASE_PATH_IMAGE}portfolio/${portfolio.image}`} />
                                 <div>
                                     <p className={styles.mb1}>Ссылка: <a href={portfolio.iframeLink} target="_blank">{portfolio.iframeLink}</a></p>
-                                    <p>Тип: {portfolio.type == "Podcasts" ? "Подкаст" : portfolio.type == "ConversationalVideos" ? "Разговорные видео" : portfolio.type == "Interview" ? "Интервью" : "Прямой эфир"}</p>
+                                    <p>Тип: {portfolio.type == "Podcasts" ? "Подкаст" : portfolio.type == "ConversationalVideos" ? "REELS/SHORTS" : portfolio.type == "Interview" ? "Интервью" : "Прямой эфир"}</p>
                                     <div onClick={() => deletePortfolio(portfolio.id)} className={styles.btnDelete}>Удалить</div>
                                 </div>
                             </div>    
