@@ -396,9 +396,28 @@
     .sliderText h3{
         text-align: center;
     }
+
+    .reels{
+        font-size: 14px;
+        background: #fff;
+        color: #4a0eb9;
+        font-weight: 700;
+        padding: 9px 17px;
+        border-radius: 0 15px 0 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
 }
 
 @media (max-width:576px) {
+
+    .reels{
+        display: none;
+    }
+
+    
     .sliderText p{
         font-size: 16px;
         font-style: normal;

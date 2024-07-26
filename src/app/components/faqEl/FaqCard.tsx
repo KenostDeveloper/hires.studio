@@ -7,7 +7,7 @@ const FaqCard = ({props}: any) => {
     return (
         <div className={styles.faqCard}>
             <div className={styles.faqCardImg}>
-                <img src={props.img} alt="" />
+                <img src={props.img} alt={props.name} />
             </div>
             <p><b>{props.name}</b> - {props.description}</p>
         </div>

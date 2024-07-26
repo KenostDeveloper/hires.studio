@@ -6,15 +6,36 @@ import PrivacityComponent from "./PrivacityComponent";
 import styles from "./privacity.module.css";
 
 export const metadata = {
-  title: "HiRes Studio — Политика конфиденциальности",
-  description:
-    "Студия записи подкастов и интервью в Санкт-Петербурге Hires Studio. Удобное расположение - Московский пр-кт 22М. Аренда с оператором и без. 4К-камеры. Топовые микрофоны Shure. Онлайн-бронирование. Проф. оборудование. Комната отдыха/ожидания.",
-  icons: {
-    icon: "/icons/logo.svg",
-  },
-  alternates: {
-    canonical: "https://hires.studio/privacity"
-  }
+  title: "HiRes Studio — Политика конфиденциальности. Подкасты, интервью, Reels/Shorts и разговорные ролики на высочайшем уровне",
+    description: "Политика конфиденциальности студии Hires Studio в Санкт-Петербурге.",
+    icons: {
+      icon: '/icons/logo.svg'
+    },
+    robots: "index, nofollow",
+    alternates: {
+      canonical: "https://hires.studio"
+    },
+    openGraph: {
+      title: 'Hires Studio - студия видеозаписи в Санкт-Петербурге. Подкасты, интервью, Reels/Shorts и разговорные ролики на высочайшем уровне',
+      description: 'Студия видеозаписи в Санкт-Петербурге Санкт-Петербурге Hires Studio. Удобное расположение - Московский пр-кт 22М. Аренда с оператором и без. 4К-камеры. Топовые микрофоны Shure. Онлайн-бронирование. Проф. оборудование. Комната отдыха/ожидания.',
+      url: 'https://hires.studio',
+      siteName: 'hires.studio',
+      images: [
+        {
+          url: '/bg/800x600.jpg', // Dynamic og route
+          width: 800,
+          height: 600,
+        },
+        {
+          url: '/bg/1800x1600.jpg', // Dynamic og route
+          width: 1800,
+          height: 1600,
+          alt: 'Hires Studio - студия видеозаписи в Санкт-Петербурге',
+        },
+      ],
+      locale: 'ru_RU',
+      type: 'website',
+    },
 };
 
 export default function Privacity() {

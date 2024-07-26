@@ -20,6 +20,7 @@ import FaqEl from "../components/faqEl/FaqEl";
 import FaqPrice from "../components/faqEl/FaqPrice";
 import SwiperPrice from "../components/Swiper/SwiperPrice";
 import Packet from "../components/Packet/Packet";
+import SwiperPortfolioReels from "../components/Swiper/SwiperPortfolioReels";
 
 export default function BusinessComponents() {
     const [modal, setModal] = useState(false)
@@ -241,51 +242,52 @@ export default function BusinessComponents() {
                     {coloredCardItems.map((item: any) => <ColoredCard key={item.id} item={item}/>)}
                 </div>
 
-                <Title text="Наши клиенты" id="portfolio"/>
-                {portfilioList == 0 ? 
-                    <div className={styles.clients}>
-                        <div className={styles.clients__el} onClick={() => setPortfolioList(1)}>
-                            <img src="/bg/portfolio/1.png" alt="Подкасты" />
-                            <p>Подкасты</p>
-                        </div>
-                        <div className={styles.clients__el} onClick={() => setPortfolioList(2)}>
-                            <img src="/bg/portfolio/2.png" alt="Прямые эфиры" />
-                            <p>Прямые эфиры</p>
-                        </div>
-                        <div className={styles.clients__el} onClick={() => setPortfolioList(3)}>
-                            <img src="/bg/portfolio/3.png" alt="Интервью" />
-                            <p>Интервью</p>
-                        </div>
-                        <div className={styles.clients__el} onClick={() => setPortfolioList(4)}>
-                            <img src="/bg/portfolio/4.png" alt="Разговорные видео" />
-                            <p>Разговорные видео</p>
-                        </div>
-                    </div>
-                : portfilioList == 1 ?
-                    <div>
-                    <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
-                    <SwiperPortfolio type={"Podcasts"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
-                    <div className={styles.shadowTree}></div>
-                    </div>
-                : portfilioList == 2 ?
-                    <div>
-                    <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
-                    <SwiperPortfolio type={"LiveBroadcasts"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
-                    <div className={styles.shadowTree}></div>
-                    </div>
-                : portfilioList == 3 ?
-                    <div>
-                    <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
-                    <SwiperPortfolio type={"Interview"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
-                    <div className={styles.shadowTree}></div>
-                    </div>
-                :
-                    <div>
-                    <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
-                    <SwiperPortfolio type={"ConversationalVideos"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
-                    <div className={styles.shadowTree}></div>
-                    </div>
-                }
+                <Title text="Снято у нас" />
+
+            {portfilioList == 0 ? 
+              <div className={styles.clients}>
+                <div className={styles.clients__el} onClick={() => setPortfolioList(1)}>
+                  <img src="/bg/portfolio/1.png" alt="Разговорные видео" />
+                  <p>Подкасты</p>
+                </div>
+                <div className={styles.clients__el} onClick={() => setPortfolioList(2)}>
+                  <img src="/bg/portfolio/2.png" alt="Прямые эфиры" />
+                  <p>Прямые эфиры</p>
+                </div>
+                <div className={styles.clients__el} onClick={() => setPortfolioList(3)}>
+                  <img src="/bg/portfolio/3.png" alt="Интервью" />
+                  <p>Интервью</p>
+                </div>
+                <div className={styles.clients__el} onClick={() => setPortfolioList(4)}>
+                  <img src="/bg/portfolio/5.png" alt="Reels/Shorts" />
+                  <p>Reels/Shorts</p>
+                </div>
+              </div>
+            : portfilioList == 1 ?
+              <div>
+                <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
+                <SwiperPortfolio type={"Podcasts"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
+                <div className={styles.shadowTree}></div>
+              </div>
+            : portfilioList == 2 ?
+              <div>
+                <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
+                <SwiperPortfolio type={"LiveBroadcasts"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
+                <div className={styles.shadowTree}></div>
+              </div>
+            : portfilioList == 3 ?
+              <div>
+                <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
+                <SwiperPortfolio type={"Interview"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
+                <div className={styles.shadowTree}></div>
+              </div>
+            :
+              <div>
+                <img className={styles.ClientBack} src="/icons/back.svg" alt="Назад" onClick={() => setPortfolioList(0)}/>
+                <SwiperPortfolioReels type={"ConversationalVideos"} portfolio={portfolio} handlePortfolioClick={handlePortfolioClick}/>
+                <div className={styles.shadowTree}></div>
+              </div>
+            }
 
                 <Title text="Наши локации" id="studios"/>
                 <div className={styles.Location}>

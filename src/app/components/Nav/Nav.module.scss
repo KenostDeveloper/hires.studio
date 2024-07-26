@@ -88,8 +88,7 @@
 }
 
 
-
-.nav:not(.nav.fixed) .textWhite *{
+.nav:not(.nav.fixed) .textWhite *:not(.inst rect){
     color: #FFF;
     fill: #FFF !important;
 
@@ -98,6 +97,8 @@
         fill: #4A0EB9 !important;
     }
 }
+
+
 
 .vk svg path{
     fill: #312C2C;
@@ -145,11 +146,11 @@
     padding-top: 0px;
     background: #FFF;
 
-    .textWhite *{
+    .textWhite *:not(.inst rect){
         color: #312C2C;
         fill: #312C2C;
 
-        &:hover{
+        &:hover:not(.nav__bron){
             color: #4A0EB9 !important;
         }
     }
