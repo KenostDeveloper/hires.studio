@@ -57,7 +57,7 @@ const SwiperJS = ({setModal}: any) => {
             <SwiperSlide>
                 <div className={styles.slider}>
                     <div className={styles.sliderImg}>
-                    <img src="/bg/bg2.JPG" alt="" />
+                    <img src="/bg/bg2.webp" alt="" />
                     </div>
                     <div className={styles.sliderText}>
                         <h3>Студия подкастов</h3>
@@ -73,7 +73,7 @@ const SwiperJS = ({setModal}: any) => {
             <SwiperSlide>
                 <div className={styles.slider}>
                     <div className={styles.sliderImg}>
-                    <img src="/bg/bg7.JPG" alt="" />
+                    <img src="/bg/bg7.webp" alt="" />
                     </div>
                     <div className={styles.sliderText}>
                         <h3>Интерьерная студия</h3>
@@ -103,7 +103,7 @@ const SwiperJS = ({setModal}: any) => {
             <SwiperSlide>
                 <div className={styles.slider}>
                     <div className={styles.sliderImg}>
-                    <img src="/bg/slider/5.png" alt="" />
+                    <img src="/bg/slider/5.webp" alt="" />
                     </div>
                     <div className={styles.sliderText}>
                         <h3>Запись подкаста с оператором</h3>

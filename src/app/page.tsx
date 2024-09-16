@@ -82,7 +82,7 @@ export default function Home() {
           name: "Видеоштатив Falcon Eyes (3 шт)",
           description:
             "обладает прочной конструкцией, что обеспечивает стабильность и надежность во время съемки. Кроме того, его регулируемая высота и надежные фиксации позволяют легко настроить желаемое положение камеры. Видеоштатив также оснащен гидравлическими головками, которые обеспечивают плавные движения при съемке видео.",
-          img: "./bg/faq/2.png",
+          img: "./bg/faq/2.webp",
         },
       ],
     },
@@ -110,7 +110,7 @@ export default function Home() {
           name: "Звуковая карта Solid State Logic SSL 2",
           description:
             "обеспечивает отличное звучание благодаря студийному качеству записи и воспроизведения, высокой частоте дискретизации и низкому уровню шума.",
-          img: "./bg/faq/9.png",
+          img: "./bg/faq/9.jpg",
         },
         {
           id: 3,
@@ -180,14 +180,14 @@ export default function Home() {
           name: "Рекордер Zoom H6",
           description:
             "оборудован шестью входами для микрофонов, он обеспечивает высокое качество звука и гибкость при записи с различных источников.",
-          img: "./bg/faq/8.jpg",
+          img: "./bg/faq/8.webp",
         },
         {
           id: 3,
           name: "Предусилитель DBX 286 s (2 шт) ",
           description:
             "обеспечивает высокое качество звука, благодаря технологии обработки сигнала и встроенному компрессору, эквалайзеру, декессору и усилителю.",
-          img: "./bg/faq/10.png",
+          img: "./bg/faq/10.webp",
         },
       ],
     },
@@ -370,43 +370,43 @@ export default function Home() {
               </h1>
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
-              <img src="/bg/bg1.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img src="/bg/bg1.webp" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1>
               Студия подкастов <span>в Санкт-Петербурге</span>
               </h1>
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
-              <img src="/bg/bg2.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img src="/bg/bg2.webp" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1>
               Студия подкастов <span>в Санкт-Петербурге</span>
               </h1>
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
-              <img src="/bg/bg3.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img src="/bg/bg3.webp" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1>
               Студия подкастов <span>в Санкт-Петербурге</span>
               </h1>
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
-              <img src="/bg/bg5.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img src="/bg/bg5.webp" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1 className={styles.mainH1Mini}>
               Интерьерная студия <span>в Санкт-Петербурге</span>
               </h1>
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
-              <img src="/bg/bg6.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img src="/bg/bg6.webp" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1 className={styles.mainH1Mini}>
               Интерьерная студия <span>в Санкт-Петербурге</span>
               </h1>
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
-              <img src="/bg/bg7.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img src="/bg/bg7.webp" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1 className={styles.mainH1Mini}>
               Интерьерная студия <span>в Санкт-Петербурге</span>
               </h1>
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
-              <img src="/bg/bg8.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img src="/bg/bg8.webp" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1 className={styles.mainH1Mini}>
               Интерьерная студия <span>в Санкт-Петербурге</span>
               </h1>
