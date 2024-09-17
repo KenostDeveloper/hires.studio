@@ -1,13 +1,13 @@
 'use client'
 import { useEffect, useState } from "react";
-import styles from "./photo.module.css";
-import Modal from "../components/Modal/Modal";
-import Nav from "../components/Nav/Nav";
+import styles from "../photo.module.css";
+import Modal from "../../components/Modal/Modal";
+import Nav from "../../components/Nav/Nav";
 import Image from 'next/image'
 import Link from "next/link";
 import axios from "axios";
-import Loading from "../components/Helps/Loading";
-import Footer from "../components/footer/Footer";
+import Loading from "../../components/Helps/Loading";
+import Footer from "../../components/footer/Footer";
 
 export default function PhotoComponents() {
     const [modal, setModal] = useState(false)
@@ -57,7 +57,7 @@ export default function PhotoComponents() {
 
     function updatePhoto() {
         console.log("updatePhoto")
-        axios.get(`/api/photo?limit=20&page=${currentPage}&type=ALL`).then(res => {
+        axios.get(`/api/photo?limit=20&page=${currentPage}&type=Podcaster`).then(res => {
             // console.log('fetching')
             setPhoto([...photo, ...res.data.Photo])
             setCurrentPage(currentPage + 1)
@@ -97,8 +97,8 @@ export default function PhotoComponents() {
     <div>
         <div className={styles.typePhoto}>
             <div className={`container ${styles.container}`}>
-                <Link href="/photo" className={`${styles.typePhotoTitle} ${styles.active}`}>Все</Link>
-                <Link href="/photo/podcaster" className={`${styles.typePhotoTitle}`}>Подкастерская</Link>
+                <Link href="/photo" className={`${styles.typePhotoTitle}`}>Все</Link>
+                <Link href="/photo/podcaster" className={`${styles.typePhotoTitle} ${styles.active}`}>Подкастерская</Link>
                 <Link href="/photo/interior" className={`${styles.typePhotoTitle}`}>Интерьерная</Link>
                 <Link href="/photo/dressing" className={`${styles.typePhotoTitle}`}>Гримерка</Link>
             </div>
