@@ -364,13 +364,13 @@ export default function Home() {
             // onSlideChange={() => console.log('slide change')}
             >
             <SwiperSlide className={styles.mainImage}>
-              <img className="" src="/bg/bg1.ARW" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img className="" src="/bg/bgn-1.jpg" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1>
               Студия подкастов <span>в Санкт-Петербурге</span>
               </h1>
             </SwiperSlide>
             <SwiperSlide className={styles.mainImage}>
-              <img src="/bg/bg1.webp" alt="Студия видео и звуко записи в Санкт-Петербурге" />
+              <img src="/bg/bgn-2.JPG" alt="Студия видео и звуко записи в Санкт-Петербурге" />
               <h1>
               Студия подкастов <span>в Санкт-Петербурге</span>
               </h1>

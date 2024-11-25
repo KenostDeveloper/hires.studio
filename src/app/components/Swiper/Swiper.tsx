@@ -57,6 +57,19 @@ const SwiperJS = ({setModal}: any) => {
             <SwiperSlide>
                 <div className={styles.slider}>
                     <div className={styles.sliderImg}>
+                    <img src="/bg/prime.jpg" alt="" />
+                    </div>
+                    <div className={styles.sliderText}>
+                        <h3>Студия PRIME</h3>
+                        <p>PRIME — лучшая студия для записи видео и аудио подкастов. Современное оборудование, профессиональная акустика и уютная атмосфера создают идеальные условия для вашего контента. Исходные материалы вы сможете получить на съемный носитель или сохранить в облаке (Яндекс.Диск/Google Drive). PRIME — студия, где ваши идеи становятся качественным медиа!</p>
+
+                        <div onClick={() => setModal(true)} className={styles.bronButton}>ЗАБРОНИРОВАТЬ <img src="/icons/lineButton.svg" alt="" /></div>
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className={styles.slider}>
+                    <div className={styles.sliderImg}>
                     <img src="/bg/bg2.webp" alt="" />
                     </div>
                     <div className={styles.sliderText}>
